@@ -31,6 +31,11 @@ Run the server:
 npm start
 ```
 
-
+## Contributors
+*[Joseph Ensminger](https://github.com/Jtensminger)
+*[So Chung](https://github.com/sorachung)
+*[Leewood Chan](https://github.com/LeewoodChan)
+*[Jeremy Bickford](https://github.com/Silverfoxslash)
+*[Nicholas Matteson](https://github.com/NicholasMatteson)
 
 
