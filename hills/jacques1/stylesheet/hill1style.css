@@ -1,0 +1,83 @@
+@charset "utf-8";
+#hillForm #Name {
+}
+
+@media (max-width:414px){
+.body {
+	background-color: #FFFFFF;
+	background-image: url(images/background.jpg);
+	min-height: 623px;
+}
+.welcome {
+	text-align: center;
+	font-family: ewert;
+	font-style: normal;
+	font-weight: 400;
+	font-size: medium;
+	color: #DFC353;
+}
+.hillForm {
+	text-align: center;
+}
+.crown {
+	padding-left: 0%;
+	padding-right: 0%;
+	clear: both;
+}
+.submit {
+}
+
+
+
+
+
+
+}
+
+@media (max-width:1280px){
+.body {
+	background-color: #FFFFFF;
+	background-image: url(background.jpg);
+	background-repeat: no-repeat;
+	background-size: auto auto;
+	min-width: px;
+	min-height: 900px;
+	font-family: diplomata;
+	font-style: normal;
+	font-weight: 400;
+}
+.hillForm .form-group #Name {
+	text-align: center;
+}
+
+.welcome {
+	text-align: center;
+	font-family: almendra-sc;
+	font-style: normal;
+	font-weight: 400;
+	font-size: xx-large;
+	color: #FFFFFF;
+	text-shadow: 1px -1px #000000;
+}
+.crown {
+	text-align: left;
+	padding-left: 0%;
+}
+.hillForm {
+	text-align: center;
+	font-family: ewert;
+	font-style: normal;
+	font-weight: 400;
+	font-size: x-large;
+}
+.btn-primary {
+	font-family: diplomata;
+	font-style: normal;
+	font-weight: 400;
+}
+
+
+
+
+
+}
