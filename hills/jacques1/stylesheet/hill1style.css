@@ -37,7 +37,7 @@
 @media (max-width:1280px){
 .body {
 	background-color: #FFFFFF;
-	background-image: url(background.jpg);
+	background-image: url(../images/background.jpg);
 	background-repeat: no-repeat;
 	background-size: auto auto;
 	min-width: px;
