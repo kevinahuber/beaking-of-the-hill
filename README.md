@@ -37,5 +37,6 @@ npm start
 *[Leewood Chan](https://github.com/LeewoodChan)
 *[Jeremy Bickford](https://github.com/Silverfoxslash)
 *[Nicholas Matteson](https://github.com/NicholasMatteson)
+*[Kevin Huber](https://github.com/kahjav)
 
 
