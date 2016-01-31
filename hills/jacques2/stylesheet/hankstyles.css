@@ -32,6 +32,8 @@ body {
 	padding-right: 14px;
 	padding-bottom: 14px;
 	padding-left: 14px;
+	margin-bottom: 0px;
+	margin-top: 10px;
 }
 .btn {
 }
@@ -43,6 +45,17 @@ body {
 .input {
 	color: #000000;
 }
+.leader {
+	color: #FFFFFF;
+	border-style: dotted;
+	border-color: #FFFFFF;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	margin-left: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
 
 
 
@@ -61,4 +74,6 @@ body {
 	min-width: 130px;
 }
 
+}
+.leaderboard {
 }

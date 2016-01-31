@@ -34,7 +34,7 @@ router.post('/claim-hill/:id', function(req, res, next) {
   hill.findOne({name: hillName}, function(err, currentHill){
     if (err) return next(err)
     var outedKing = (currentHill ? currentHill.currentKing : '')
-    var score = currentSeconds - (currentHill && currentHill.startDate ? currentHill.startDate.getTime(): 0)
+    var score = Math.round((currentSeconds - (currentHill && currentHill.startDate ? currentHill.startDate.getTime(): 0)) / 1000)
     king.update({name: outedKing}, {$inc: {time: score}},{upsert: true}, function (err, currentKing) {
       if (err) return next(err)
       hill.update({name: hillName}, {startDate: currentTime, currentKing: name}, {upsert: true}, function (err, hill) {
