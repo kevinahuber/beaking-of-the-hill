@@ -4,7 +4,7 @@ block content
 
   header 
     .inner 
-      a.right(href="/rules") Rules >
+      a.left(href="/") < Leaderboard
 
   section
     .inner
@@ -13,31 +13,15 @@ block content
 
       .meat
 
-        h3 Players
-        table
-          thead
-            tr
-              th Name
-              th Score
-          tbody
-            each king in kings
-              if king.name !== "" && king.name !== "No Name"
-                tr
-                  td= king.name
-                  td= king.time
-
-        h3 Hills
-        table
-          thead
-            tr
-              th Hill
-              th Current King
-
-          tbody
-            each hill in hills
-              tr
-                td= hill.name
-                td= hill.currentKing
+        h3 The Rules
+       
+        ul
+          li You may not capture the same hill twice in a row.
+          li You should use the  same name at each hill.
+          li The longer you hold a hill, the more points you obtain. 
+          li Hills can be taken from you be walking to a Hill and capturing it.
+          li Live leaderboard is at beakingofthehill.com.
+          li You may hold more than one Hill at once.
 
   footer 
     .inner

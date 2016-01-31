@@ -17,7 +17,6 @@ a {
 
 header {
 	width: 100%;
-	text-align: right;
 	background-color: #282825;
 	padding: 33px 0;
 }
@@ -28,6 +27,16 @@ header a {
 	text-decoration: none;
 	font-weight: 900;
 	font-size: 36px;
+	text-align: right;
+}
+
+header a.right {
+	text-align: right;
+	display: block;
+}
+
+header a.left {
+	text-align: left;
 }
 
 div.icon img {
@@ -139,7 +148,17 @@ p {
 	margin: 0;
 }
 
+ul {
+	padding: 0;
+}
 
+li {
+	list-style-type: none;
+	color: #fff;
+	font-size: 24px;
+	font-weight: 300;
+	padding: 0 0 15px;
+}
 
 
 
