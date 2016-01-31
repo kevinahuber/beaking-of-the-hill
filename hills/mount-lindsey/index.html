@@ -1,0 +1,91 @@
+<!doctype html>
+
+<!--[if IE 9 ]><html lang="en" class="ie9"><![endif]-->
+<!--[if lt IE 9 ]><html lang="en" class="ie8"><![endif]-->
+<!--[if lt IE 8 ]><html lang="en" class="ie7"><![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BKON Beacon Beaking Hill</title>
+	<meta name="description" content="Check in yo.">
+	
+	<!-- icons -->
+	<link rel="shortcut icon" href="_assets/img/favicon.ico">
+	<link rel="apple-touch-icon" href="_assets/img/apple-touch-57.png">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="_assets/css/styles.css" media="screen">
+
+	<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Bangers|Open+Sans:300' rel='stylesheet' type='text/css'>
+
+	<!-- JavaScript -->
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+	<script src="_assets/js/main.js"></script>
+
+</head>
+<body class="bg">
+
+<div class="container">
+	<header>
+		<h1 id="fittext">Mt. Lindsey</h1>
+	</header>
+</div>
+
+
+<section>
+		
+    <form action="http://beakingofthehill.com/claim-hill/burgerhill?_method=PUT" method="POST">
+
+		<div class="floating-placeholder"><input type="text" name="name" id='name' size="10"><div><label for='name'>My Name Is</label></div></div>
+
+        <div class='btn'><button class='submit' type='submit' name='submit'>Send Form</button></div>
+
+  	</form>
+
+</section>
+
+<footer>
+
+</footer>
+ 	
+	<script type="text/javascript">
+ 		$(document).ready(function(){
+
+			function updateText(event){
+					var input=$(this);
+					setTimeout(function(){
+						var val=input.val();
+						if(val!=="")
+							input.parent().addClass("floating-placeholder-float");
+						else
+							input.parent().removeClass("floating-placeholder-float");
+					},1);
+				}
+				$(".floating-placeholder input").keydown(updateText);
+				$(".floating-placeholder input").change(updateText);
+				$("input:text").val("");
+
+				$('input[placeholder="mm/dd/yyyy"]').bind('keyup',function(){
+					var strokes = $(this).val().length;
+					if(strokes === 2 || strokes === 5){
+							var thisVal = $(this).val();
+							thisVal += '/';
+							$(this).val(thisVal);
+					}
+			});
+
+		});
+	</script>
+	
+ 	<script src="_assets/js/fittext.js"></script>
+	<script type="text/javascript">
+	  fitText(document.getElementById('fittext'), 1)
+
+	</script>
+
+</body>
+</html>
