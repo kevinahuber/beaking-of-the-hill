@@ -15,18 +15,16 @@ router.post('/claim-hill/:id', function(req, res, next) {
   var currentTime = new Date();
   var currentSeconds = currentTime.getTime()
 
-  hill.findOne({name: hillName }, function(err, currentHill){
+  hill.findOne({name: hillName}, function(err, currentHill){
     if (err) return next(err)
-    if (currentHill) {
-      var score = currentSeconds - currentHill.startDate.getTime()
-      king.update({name: currentHill.currentKing}, {$inc: {time: score}},{upsert: true}, function (err, currentKing) {
+    var score = currentSeconds - (currentHill && currentHill.startDate ? currentHill.startDate.getTime(): 0)
+    king.update({name: currentHill.currentKing || name}, {$inc: {time: score}},{upsert: true}, function (err, currentKing) {
+      if (err) return next(err)
+      hill.update({name: hillName}, {startDate: currentTime, currentKing: name}, {upsert: true}, function (err, hill) {
         if (err) return next(err)
-        hill.update({name: hillName}, {startDate: currentTime, currentKing: name}, {upsert: true}, function (err, hill) {
-          if (err) return next(err)
-          console.log("You have taken the hill!")
-        })
+        console.log("You have taken the hill!")
       })
-    }
+    })
   });
 })
 
