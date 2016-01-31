@@ -1,17 +1,13 @@
 body {
-background-image: url("Images/smaug_hoard.jpg");
+background-image: url("Images/wizard_s_tower_by_jcbarquet-d5mc33w.jpg");
 width: 100%;
 }
 h1{
 	font-family:"Copperplate Gothic Light",sans-serif;
 	font-size: 35px;
-	color: #eaea69;
+	color: #003300;
 	text-align: center;
 	
-}
-img{
-	height: 400px;
-	margin: auto;
 }
 div.centered {
 	text-align:center;
