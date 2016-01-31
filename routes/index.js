@@ -18,7 +18,7 @@ router.post('/claim-hill/:id', function(req, res, next) {
   hill.findOne({name: hillName}, function(err, currentHill){
     if (err) return next(err)
     var score = currentSeconds - (currentHill && currentHill.startDate ? currentHill.startDate.getTime(): 0)
-    king.update({name: currentHill.currentKing}, {$inc: {time: score}},{upsert: true}, function (err, currentKing) {
+    king.update({name: currentHill.currentKing || name}, {$inc: {time: score}},{upsert: true}, function (err, currentKing) {
       if (err) return next(err)
       hill.update({name: hillName}, {startDate: currentTime, currentKing: name}, {upsert: true}, function (err, hill) {
         if (err) return next(err)
