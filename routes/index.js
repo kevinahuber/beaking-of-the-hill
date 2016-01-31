@@ -45,7 +45,7 @@ router.post('/claim-hill/:id', function(req, res, next) {
       }
       if(lastHillofContender == hillName) {
         console.log("You need to claim another hill first!")
-        res.redirect('/')
+        res.redirect('/silly-goose')
       } else {
         king.update({name: name}, {lastHill: hillName}, {upsert: true}, function(err, newKing) {
           if(err) return next(err)
@@ -76,6 +76,10 @@ router.get('/dragons-den', function(req, res, next) {
 
 router.get('/lindsey', function(req, res, next) {
   res.render('lindsey1')
+})
+
+router.get('/silly-goose', function(req, res, next) {
+  res.render('sillygoose')
 })
 
 

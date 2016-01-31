@@ -32,11 +32,15 @@ npm start
 ```
 
 ## Contributors
-*[Joseph Ensminger](https://github.com/Jtensminger)
-*[So Chung](https://github.com/sorachung)
-*[Leewood Chan](https://github.com/LeewoodChan)
-*[Jeremy Bickford](https://github.com/Silverfoxslash)
-*[Nicholas Matteson](https://github.com/NicholasMatteson)
-*[Kevin Huber](https://github.com/kahjav)
+* [Joseph Ensminger](https://github.com/Jtensminger)
+* [So Chung](https://github.com/sorachung)
+* [Leewood Chan](https://github.com/LeewoodChan)
+* [Jeremy Bickford](https://github.com/Silverfoxslash)
+* [Nicholas Matteson](https://github.com/NicholasMatteson)
+* [Kevin Huber](https://github.com/kahjav)
+* [Kianyi Norwood](https://github.com/kianyi-n)
+* [Marcus Spears](https://github.com/malcovious)
+* [Jacques Wiese](https://github.com/jaw2ay)
+
 
 
