@@ -45,6 +45,22 @@ router.post('/claim-hill/:id', function(req, res, next) {
   });
 })
 
+router.get('/hank-hell', function(req, res, next) {
+  res.render('jacques2')
+})
+
+router.get('/burger-hill', function(req, res, next) {
+  res.render('jacques1')
+})
+
+router.get('/dragons-den', function(req, res, next) {
+  res.render('marcus1')
+})
+
+router.get('/lindsey', function(req, res, next) {
+  res.render('lindsey1')
+})
+
 
 
 module.exports = router;

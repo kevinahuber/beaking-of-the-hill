@@ -1,0 +1,144 @@
+doctype html
+html.no-js(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title BKON Beacon Beaking Hill
+    meta(name='description', content='Check in yo.')
+    link(rel='shortcut icon', href='_assets/img/favicon.ico')
+    link(rel='apple-touch-icon', href='_assets/img/apple-touch-57.png')
+    link(rel='stylesheet', href='stylesheets/styles2.css', media='screen')
+    link(href='https://fonts.googleapis.com/css?family=Bangers|Open+Sans:300', rel='stylesheet', type='text/css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js')
+    script.
+      // JavaScript Document
+
+      // codekit pre-prends
+
+      // set initial variables
+      var $showMenu,
+        $header,
+        $content;
+
+      $(function() {
+        firstLoad();
+      });
+
+      function firstLoad() {
+        initVars();
+        showMenu();
+        checkScreenSize();
+        initPlaceholders();
+      }
+
+      // function to set dom vars, etc that will not change
+      function initVars() {
+        $nav  = $('header.main nav.main-nav ul');
+        $showMenu   = $('a#showMenu');
+      }
+
+      $(window).resize(function() {
+        checkScreenSize();
+      });
+
+      // checks to see if screen size requires mobile menu
+      function checkScreenSize(){
+        if ($(window).width() < 950) {
+          $nav.removeClass('expand');
+        } else {
+          $nav.removeClass('expand');
+        }
+      }
+
+      // show hide left menu
+      function showMenu(){
+        $showMenu.click(function(){
+          if ($nav.hasClass('expand')) {
+            menuOut();
+          } else {
+            menuIn();
+          }
+          return false;
+        });
+      }
+      function menuOut() {
+        $nav.removeClass('expand');
+        //$content.unbind('click',menuOut);
+      }
+      function menuIn() {
+        $nav.addClass('expand');
+        //$content.bind('click',menuOut);
+      }
+
+      // this function fixes placeholders in browsers that don't support it
+      function initPlaceholders() {
+        if ($('input[placeholder]').length > 0) {
+          if (!placeholderSupported()) {
+            $('input[placeholder]').focus(function() {
+              var input = $(this);
+              if (input.val() == input.attr('placeholder')) {
+                input.val('');
+                input.removeClass('placeholder');
+              }
+            }).blur(function() {
+              var input = $(this);
+              if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                input.addClass('placeholder');
+                input.val(input.attr('placeholder'));
+              }
+            }).blur();
+            $('input[placeholder]').parents('form').submit(function() {
+              $(this).find('[placeholder]').each(function() {
+                var input = $(this);
+                if (input.val() == input.attr('placeholder')) {
+                  input.val('');
+                }
+              })
+            });
+          }
+        }
+      }
+      function placeholderSupported() {
+          test = document.createElement('input');
+          return ('placeholder' in test);
+      }
+  body.bg
+    .container
+      header
+        h1#fittext Mt. Lindsey
+    section
+      form(action='/claim-hill/mt-lindsey?_method=PUT', method='POST')
+        .floating-placeholder
+          input#name(type='text', name='name', size='10')
+          div
+            label(for='name') My Name Is
+        .btn
+          button.submit(type='submit', name='submit') Send Form
+    footer
+    script(type='text/javascript').
+      $(document).ready(function(){
+      function updateText(event){
+      var input=$(this);
+      setTimeout(function(){
+      var val=input.val();
+      if(val!=="")
+      input.parent().addClass("floating-placeholder-float");
+      else
+      input.parent().removeClass("floating-placeholder-float");
+      },1);
+      }
+      $(".floating-placeholder input").keydown(updateText);
+      $(".floating-placeholder input").change(updateText);
+      $("input:text").val("");
+      $('input[placeholder="mm/dd/yyyy"]').bind('keyup',function(){
+      var strokes = $(this).val().length;
+      if(strokes === 2 || strokes === 5){
+      var thisVal = $(this).val();
+      thisVal += '/';
+      $(this).val(thisVal);
+      }
+      });
+      });
+    script(src='_assets/js/fittext.js')
+    script(type='text/javascript').
+      fitText(document.getElementById('fittext'), 1)

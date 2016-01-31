@@ -1,0 +1,79 @@
+@charset "utf-8";
+body {
+	background-image: url(../images/hellfire.jpg);
+}
+
+@media (max-width:1280px){
+body {
+	background-image: url(../images/hellfire.jpg);
+	background-size: auto auto;
+	background-repeat: no-repeat;
+}
+.text {
+	min-height: 130px;
+	padding-left: 10%;
+	padding-right: 10%;
+	background-color: #000000;
+	color: #FFFFFF;
+	border-radius: 20px;
+	border-color: #FFFFFF;
+	border-style: solid;
+	text-align: center;
+	font-family: eater;
+	font-style: normal;
+	font-weight: 400;
+}
+.hellform {
+	color: #FFFFFF;
+	border-radius: 20px;
+	border-color: #FFFFFF;
+	border-style: solid;
+	padding-top: 14px;
+	padding-right: 14px;
+	padding-bottom: 14px;
+	padding-left: 14px;
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+.btn {
+}
+.btn-block {
+}
+.btn-primary {
+	margin-top: 11px;
+}
+.input {
+	color: #000000;
+}
+.leader {
+	color: #FFFFFF;
+	border-style: dotted;
+	border-color: #FFFFFF;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	margin-left: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+}
+.input {
+	text-align: center;
+}
+
+@media (max-width: 450px){
+.image {
+	height: 169px;
+	min-width: 130px;
+}
+
+}
+.leaderboard {
+}
