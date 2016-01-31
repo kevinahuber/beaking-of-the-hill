@@ -86,5 +86,9 @@ router.get('/rules', function(req, res, next) {
   res.render('rules')
 })
 
+router.get('/black-knight', function(req, res, next) {
+  res.render('blackknight')
+})
+
 
 module.exports = router;

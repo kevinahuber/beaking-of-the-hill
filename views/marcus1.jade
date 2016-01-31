@@ -3,6 +3,8 @@ html(lang='en')
   head
     link(type='text/css', rel='stylesheet', href='stylesheets/styles.css')
     title Dragons Den
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
   body
     div
       header
@@ -11,7 +13,7 @@ html(lang='en')
         img(src='http://vignette4.wikia.nocookie.net/shovelknight/images/5/5f/BubbleDragon.gif/revision/latest?cb=20150611191924')
       div
         h1 How long can you last?
-      form(action="/claim-hill/dragons_den?_method='PUT'", method='POST')
+      form.centered(action="/claim-hill/dragons_den?_method='PUT'", method='POST')
         .centered
           input.form-control(type='text', name="name" placeholder='Enter Name')
         .centered
