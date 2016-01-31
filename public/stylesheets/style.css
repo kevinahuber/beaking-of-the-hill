@@ -160,7 +160,11 @@ li {
 	padding: 0 0 15px;
 }
 
-
+@media screen and (max-width: 1000px) {
+	.inner {
+		width: 90%;
+	}
+}
 
 
 
