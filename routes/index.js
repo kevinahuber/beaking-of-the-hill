@@ -41,14 +41,14 @@ router.post('/claim-hill/:id', function(req, res, next) {
       if(contender) {
         lastHillofContender = contender.lastHill
       } else {
-        lastHilofContender = 'none'
+        lastHillofContender = 'none'
       }
       if(lastHillofContender == hillName) {
-      console.log("You need to claim another hill first!")
+        console.log("You need to claim another hill first!")
+        res.redirect('/')
       } else {
         king.update({name: name}, {lastHill: hillName}, {upsert: true}, function(err, newKing) {
           if(err) return next(err)
-
           king.update({name: outedKing}, {$inc: {time: score}},{upsert: true}, function (err, currentKing) {
             if (err) return next(err)
             hill.update({name: hillName}, {startDate: currentTime, currentKing: name}, {upsert: true}, function (err, hill) {
