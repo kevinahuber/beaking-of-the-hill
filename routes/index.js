@@ -3,7 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/beaking');
 var hill = mongoose.model('hill', {name: String, currentKing: String, startDate: Date});
-var king = mongoose.model('king', {name: String, time: Number});
+var king = mongoose.model('king', {name: String, time: Number, lastHill: String});
 
 router.get('/', function(req, res, next) {
     var currentTime = new Date();
@@ -35,13 +35,30 @@ router.post('/claim-hill/:id', function(req, res, next) {
     if (err) return next(err)
     var outedKing = (currentHill ? currentHill.currentKing : '')
     var score = Math.round((currentSeconds - (currentHill && currentHill.startDate ? currentHill.startDate.getTime(): 0)) / 1000)
-    king.update({name: outedKing}, {$inc: {time: score}},{upsert: true}, function (err, currentKing) {
+    var lastHillofContender = 'none';
+    king.findOne({name: name}, function(err, contender) {
       if (err) return next(err)
-      hill.update({name: hillName}, {startDate: currentTime, currentKing: name}, {upsert: true}, function (err, hill) {
-        if (err) return next(err)
-        res.redirect('/')
+      if(contender) {
+        lastHillofContender = contender.lastHill
+      } else {
+        lastHilofContender = 'none'
+      }
+      if(lastHillofContender == hillName) {
+      console.log("You need to claim another hill first!")
+      } else {
+        king.update({name: name}, {lastHill: hillName}, {upsert: true}, function(err, newKing) {
+          if(err) return next(err)
+
+          king.update({name: outedKing}, {$inc: {time: score}},{upsert: true}, function (err, currentKing) {
+            if (err) return next(err)
+            hill.update({name: hillName}, {startDate: currentTime, currentKing: name}, {upsert: true}, function (err, hill) {
+              if (err) return next(err)
+                res.redirect('/')
+              })
+            })
+          })
+        }
       })
-    })
   });
 })
 
