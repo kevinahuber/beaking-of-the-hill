@@ -39,7 +39,7 @@ router.post('/claim-hill/:id', function(req, res, next) {
       if (err) return next(err)
       hill.update({name: hillName}, {startDate: currentTime, currentKing: name}, {upsert: true}, function (err, hill) {
         if (err) return next(err)
-        console.log("You have taken the hill!")
+        res.redirect('/')
       })
     })
   });
