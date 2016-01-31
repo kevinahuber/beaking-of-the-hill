@@ -1,5 +1,31 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 BeaKing of the Hill Leaderboard
+
+  h3 Players
+  table
+    thead
+      tr
+        th Name
+        th Score
+    tbody
+      each king in kings
+        tr
+          td= king.name
+          td= king.time
+
+  h3 Hills
+  table
+    thead
+      tr
+        th Hill
+        th Current King
+
+    tbody
+      each hill in hills
+        tr
+          td= hill.name
+          td= hill.currentKing
+
+

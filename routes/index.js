@@ -6,7 +6,15 @@ var hill = mongoose.model('hill', {name: String, currentKing: String, startDate:
 var king = mongoose.model('king', {name: String, time: Number});
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Hey Guys' });
+  king.find().sort('time').exec(function (err, kings) {
+    if (err) return next(err)
+    hill.find({}, function (err, hills) {
+      res.render('index', {
+        kings: kings,
+        hills: hills
+      })
+    })
+  })
 });
 
 router.post('/claim-hill/:id', function(req, res, next) {
