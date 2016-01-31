@@ -6,9 +6,18 @@ var hill = mongoose.model('hill', {name: String, currentKing: String, startDate:
 var king = mongoose.model('king', {name: String, time: Number});
 
 router.get('/', function(req, res, next) {
-  king.find().sort('time').exec(function (err, kings) {
+    var currentTime = new Date();
+    var currentSeconds = currentTime.getTime()
+    king.find().sort({'time': -1}).exec(function (err, kings) {
     if (err) return next(err)
     hill.find({}, function (err, hills) {
+      hills.forEach(function (myHill) {
+        kings.forEach(function (myKing) {
+          if(myHill.currentKing === myKing.name) {
+            myKing.time += Math.round((currentSeconds - myHill.startDate.getTime())/1000)
+          }
+        })
+      })
       res.render('index', {
         kings: kings,
         hills: hills
@@ -22,7 +31,6 @@ router.post('/claim-hill/:id', function(req, res, next) {
   var hillName = req.params.id
   var currentTime = new Date();
   var currentSeconds = currentTime.getTime()
-
   hill.findOne({name: hillName}, function(err, currentHill){
     if (err) return next(err)
     var outedKing = (currentHill ? currentHill.currentKing : '')
