@@ -1,33 +1,79 @@
 extends layout
 
 block content
-  h1 BeaKing of the Hill Leaderboard
 
-  h3 Players
-  table
-    thead
-      tr
-        th Name
-        th Score
-    tbody
-      each king in kings
-        if king.name !== "" && king.name !== "No Name"
-          tr
-            td= king.name
-            td= king.time
+  header 
+    .inner 
+      a(href="rules") Rules >
 
-  h3 Hills
-  table
-    thead
-      tr
-        th Hill
-        th Current King
+  section
+    .inner
+      .icon
+        img(src="/images/mountain-goat-opt.png")
 
-    tbody
-      each hill in hills
-        tr
-          td= hill.name
-          td= hill.currentKing
+      .meat
+
+        h3 Players
+        table
+          thead
+            tr
+              th Name
+              th Score
+          tbody
+            each king in kings
+              if king.name !== "" && king.name !== "No Name"
+                tr
+                  td= king.name
+                  td= king.time
+
+        h3 Hills
+        table
+          thead
+            tr
+              th Hill
+              th Current King
+
+          tbody
+            each hill in hills
+              tr
+                td= hill.name
+                td= hill.currentKing
+
+  footer 
+    .inner
+      .container
+        h4 #HackMT Team
+        h5 January 29-31, 2016
+        .col
+          h6 Kevin Huber 
+            span @kevinahuber
+            p Choreographer
+          h6 Leewood Chan 
+            span 
+              a(href="mailto:leewoodchan@gmail.com") Email Me
+            p HillKeeper
+          h6 So Chung 
+            span @sosarachung
+            p HillKeeper
+          h6 Marcus Spears 
+            span 
+              a(href="mailto:gilbert.spears@gmail.com") Email Me
+            p HillKeeper
+        .col
+          h6 Lindsey Maddox 
+            span @lindseyemaddox
+            p Assistant Regional Manager
+          h6 Kianya Norwood 
+            span @fizzyspirit
+            p HillKeeper
+          h6 Joseph Ensminger 
+            span @ensmingerjoseph
+            p HillKeeper
+          h6 Jacques Wiese 
+            span 
+              a(href="mailto:jacques.a.wiese@gmail.com") Email Me
+            p HillKeeper
+
 
   script.
     setTimeout(function(){
