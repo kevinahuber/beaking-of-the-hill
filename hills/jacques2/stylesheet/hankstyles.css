@@ -3,7 +3,7 @@ body {
 	background-image: url(../images/hellfire.jpg);
 }
 
-@media (max-width:1024px){
+@media (max-width:1280px){
 body {
 	background-image: url(../images/hellfire.jpg);
 	background-size: auto auto;
@@ -41,6 +41,7 @@ body {
 	margin-top: 11px;
 }
 .input {
+	color: #000000;
 }
 
 
