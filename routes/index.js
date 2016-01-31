@@ -82,6 +82,10 @@ router.get('/silly-goose', function(req, res, next) {
   res.render('sillygoose')
 })
 
+router.get('/black-knight', function(req, res, next) {
+  res.render('blackknight')
+})
+
 
 
 module.exports = router;

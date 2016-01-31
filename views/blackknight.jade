@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    style.
+      html, body {    background-color: gold}
+      h1, h2, h3 { font-family: felipa;
+      text-align: center;
+      }
+      h1 { font-size: 60px;
+      color: #000000; }
+      h2 { font-size: 40px;
+      color: #000000;}
+      h3 {   font-size: 20px;
+      color: #333333}
+      .buttonholder { width: 100%; margin: auto; }
+    title Knight Hill
+  body
+    h1 The Black Knight
+    center
+      img(src='images/knight.gif', width='175', height='258', alt='')
+    h2 Maintaining the village is only half the battle.
+    h3 Do you have what it takes to be dubbed as The Black Knight?
+    center
+      .buttonholder
+        form.hillform(action='/claim-hill/Black_Knight_Hill?_method=PUT', method='POST')
+          input(type='text', name='name', placeholder='What shall we call you?')
+          input(type='submit')
+    center
+      audio(src='sound/MedievalMusic-Camelot.mp3', controls='', autoplay='')

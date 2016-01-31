@@ -1,13 +1,13 @@
 body {
 background-image: url("https://cjlockett.files.wordpress.com/2014/02/smaug_hoard.jpg");
-width: 100%;
+width: 80%;
 }
 h1{
 	font-family:"Copperplate Gothic Light",sans-serif;
 	font-size: 35px;
 	color: #eaea69;
 	text-align: center;
-	
+
 }
 img{
 	height: 400px;
@@ -17,5 +17,6 @@ div.centered {
 	text-align:center;
 }
 input{
-	width: 25%;
+	width: 90%;
 }
+
