@@ -3,8 +3,8 @@ var router = express.Router();
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/beaking');
 var hill = mongoose.model('hill', {name: String, currentKing: String, startDate: Date});
+var king = mongoose.model('king', {name: String, time: Number});
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Hey Guys' });
 });
@@ -12,12 +12,24 @@ router.get('/', function(req, res, next) {
 router.post('/claim-hill/:id', function(req, res, next) {
   var name = req.body.name || 'No Name'
   var hillName = req.params.id
-  var startDate = new Date()
-  console.log("Name: " + name + " Hill: " + hillName)
-  hill.update({name: hillName}, {startDate: startDate, currentKing: name}, {upsert: true}, function (err, hill) {
-    if (err) next(err)
-    console.log(hill)
-  })
+  var currentTime = new Date();
+  var currentSeconds = currentTime.getTime()
+
+  hill.findOne({name: hillName }, function(err, currentHill){
+    if (err) return next(err)
+    if (currentHill) {
+      var score = currentSeconds - currentHill.startDate.getTime()
+      king.update({name: currentHill.currentKing}, {$inc: {time: score}},{upsert: true}, function (err, currentKing) {
+        if (err) return next(err)
+        hill.update({name: hillName}, {startDate: currentTime, currentKing: name}, {upsert: true}, function (err, hill) {
+          if (err) return next(err)
+          console.log("You have taken the hill!")
+        })
+      })
+    }
+  });
 })
+
+
 
 module.exports = router;
