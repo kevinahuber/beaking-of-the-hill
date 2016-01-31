@@ -27,7 +27,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/claim-hill/:id', function(req, res, next) {
-  var name = req.body.name || 'No Name'
+  var name = req.body.name.toLowerCase() || 'No Name'
   var hillName = req.params.id
   var currentTime = new Date();
   var currentSeconds = currentTime.getTime()
