@@ -1,0 +1,32 @@
+doctype html
+html
+  head(profile='http://ec2-54-201-253-47.us-west-2.compute.amazonaws.com/claim-hill/burgerhill')
+    meta(charset='utf-8')
+    link(rel='icon', type='image/png', href='images/burger.png')
+    title Burger King of the Hill
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js', rel='stylesheet', type='text/javascript')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+    link(href='stylesheets/jacques1.css', rel='stylesheet', type='text/css')
+    script.
+      var __adobewebfontsappname__="dreamweaver"
+    script(src='http://use.edgefonts.net/ewert:n4:default;diplomata:n4:default;almendra-sc:n4:default.js', type='text/javascript')
+  body.body
+    h1.welcome
+      strong.welcome(style='font-family: ewert; font-style: normal; font-weight: 400; color: #000000;') Welcome Peasants.
+    center
+      img.crown(src='images/king.gif\
+      ', alt='', width='200', height='160')
+    h1.welcome
+      strong.welcome(style='font-family: ewert; font-style: normal; font-weight: 400; color: #000000;')
+        | Do you have what it takes
+        | to become King?
+    center
+      a.leaderboard(href='/') Leaderboard
+    form.hillForm(action='/claim-hill/burgerhill?_method=PUT', method='POST')
+      .form-group
+        label(for='exampleInputEmail1')
+          strong
+            | Enter Your Name:
+            br
+        input#name.form-control(name='name', type='text', placeholder='Enter Name')
+      button.btn.btn-primary.btn-block.submit(type='submit') Click to Become King

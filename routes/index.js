@@ -27,7 +27,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/claim-hill/:id', function(req, res, next) {
-  var name = req.body.name || 'No Name'
+  var name = req.body.name.toLowerCase() || 'No Name'
   var hillName = req.params.id
   var currentTime = new Date();
   var currentSeconds = currentTime.getTime()
@@ -43,6 +43,22 @@ router.post('/claim-hill/:id', function(req, res, next) {
       })
     })
   });
+})
+
+router.get('/hank-hell', function(req, res, next) {
+  res.render('jacques2')
+})
+
+router.get('/burger-hill', function(req, res, next) {
+  res.render('jacques1')
+})
+
+router.get('/dragons-den', function(req, res, next) {
+  res.render('marcus1')
+})
+
+router.get('/lindsey', function(req, res, next) {
+  res.render('lindsey1')
 })
 
 
