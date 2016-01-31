@@ -164,6 +164,22 @@ li {
 	.inner {
 		width: 90%;
 	}
+	div.icon, div.meat {
+		width: 100%;
+		display: block;
+	}
+	div.icon img {
+		max-width: 300px;
+		margin: 0 auto;
+		display: block;	
+	}
+	div.icon {
+		margin-bottom: 70px;
+	}
+	.container {
+		width: 100%;
+		float: none;
+	}
 }
 
 
