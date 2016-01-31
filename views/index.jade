@@ -21,9 +21,10 @@ block content
               th Score
           tbody
             each king in kings
-              tr
-                td= king.name
-                td= king.time
+              if king.name !== "" && king.name !== "No Name"
+                tr
+                  td= king.name
+                  td= king.time
 
         h3 Hills
         table
