@@ -32,7 +32,7 @@ npm start
 ```
 
 ## Stack
-<a href="https://phy.net"><img alt="phy.net" src"http://beaconscreen.com/img/phynet-logo-white.png" width="250px"></a>
+<a href="https://phy.net"><img alt="phy.net" src="http://beaconscreen.com/img/phynet-logo-white.png" width="250px"></a>
 <a href="https://mongodb.com"><img alt="MongoDB" src="https://www.mongodb.com/assets/MongoDB_Brand_Resources/MongoDB-Logo-7db53b4037f9953e9df4f694c758141fcfa022cee1d2ff50749d133d0b70b692.jpg" width="250px"></a>
 <a href="http://mongoosejs.com/"><img alt="Mongoose" src="http://mongodb-tools.com/img/mongoose.png" width="250px"></a>
 <a href="http://expressjs.com/"><img alt="Express.js" src="https://i.cloudup.com/zfY6lL7eFa-3000x3000.png" width="250px"></a>
