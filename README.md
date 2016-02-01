@@ -32,14 +32,14 @@ npm start
 ```
 
 ## Stack
-<a href="https://phy.net"><img alt="phy.net" src="http://beaconscreen.com/img/phynet-logo-white.png" width="250px"></a>
+<a href="https://bkon.com"><img alt="BKON" src="http://bkon.com/wp-content/uploads/2015/11/BKONSmallBlue.png" width="250px"></a>
 <a href="https://mongodb.com"><img alt="MongoDB" src="https://www.mongodb.com/assets/MongoDB_Brand_Resources/MongoDB-Logo-7db53b4037f9953e9df4f694c758141fcfa022cee1d2ff50749d133d0b70b692.jpg" width="250px"></a>
 <a href="http://mongoosejs.com/"><img alt="Mongoose" src="http://mongodb-tools.com/img/mongoose.png" width="250px"></a>
 <a href="http://expressjs.com/"><img alt="Express.js" src="https://i.cloudup.com/zfY6lL7eFa-3000x3000.png" width="250px"></a>
 <a href="https://nodejs.org"><img alt="Node.js" src="https://nodejs.org/static/images/logos/nodejs.png" width="250px"></a>
 <a href="http://jade-lang.com"><img alt="Jade" src="http://jade-lang.com/style/jade-logo-header.svg" width="250px"></a>
-<a href="http://css.info"><img alt="CSS3" src="http://www.codingdojo.com/blog/wp-content/uploads/css.jpg" width="250px"></a>
-<a href="https://www.w3.org/TR/html5/"><img alt="HTML5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png" width="250px"></a>
+<a href="http://css.info"><img alt="CSS3" src="http://ohdoylerules.com/content/images/css3.svg" width="250px"></a>
+<a href="https://www.w3.org/TR/html5/"><img alt="HTML5" src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" width="250px"></a>
 
 ## Contributors
 * [Joseph Ensminger](https://github.com/Jtensminger)
