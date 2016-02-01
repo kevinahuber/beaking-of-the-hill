@@ -32,14 +32,14 @@ npm start
 ```
 
 ## Stack
-[![phy.net](http://beaconscreen.com/img/phynet-logo-white.png)](https://phy.net)
-[![MongoDB](https://www.mongodb.com/assets/MongoDB_Brand_Resources/MongoDB-Logo-7db53b4037f9953e9df4f694c758141fcfa022cee1d2ff50749d133d0b70b692.jpg)](https://mongodb.com)
-[![Mongoose](http://mongodb-tools.com/img/mongoose.png)](http://mongoosejs.com/)
-[![Express.js](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
-[![Node.js](https://nodejs.org/static/images/logos/nodejs.png)](https://nodejs.org)
-[![Jade](http://jade-lang.com/style/jade-logo-header.svg)](http://jade-lang.com)
-[![CSS3](http://www.codingdojo.com/blog/wp-content/uploads/css.jpg)](http://css.info)
-[![HTML5](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png)](https://www.w3.org/TR/html5/)
+[![phy.net](http://beaconscreen.com/img/phynet-logo-white.png =250x)](https://phy.net)
+[![MongoDB](https://www.mongodb.com/assets/MongoDB_Brand_Resources/MongoDB-Logo-7db53b4037f9953e9df4f694c758141fcfa022cee1d2ff50749d133d0b70b692.jpg =250x)](https://mongodb.com)
+[![Mongoose](http://mongodb-tools.com/img/mongoose.png =250x)](http://mongoosejs.com/)
+[![Express.js](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png =250x)](http://expressjs.com/)
+[![Node.js](https://nodejs.org/static/images/logos/nodejs.png =250x)](https://nodejs.org)
+[![Jade](http://jade-lang.com/style/jade-logo-header.svg =250x)](http://jade-lang.com)
+[![CSS3](http://www.codingdojo.com/blog/wp-content/uploads/css.jpg =250x)](http://css.info)
+[![HTML5](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png) =250x](https://www.w3.org/TR/html5/)
 
 ## Contributors
 * [Joseph Ensminger](https://github.com/Jtensminger)
